@@ -21,11 +21,6 @@ struct ContentView: View {
                 Image(systemName: "flag")
                 Text("Flag Raising")
             }
-            
-            WWDCView().tabItem {
-                Image(systemName: "pc")
-                Text("WWDC")
-            }
         }
     }
 }

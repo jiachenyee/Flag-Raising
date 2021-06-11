@@ -11,25 +11,36 @@ struct HeightenedAlert: View {
     
     @State var alert: CGFloat = 0
     
+    @State var value: CGFloat = 0
+    
     @State var leaveHouse = false
+    
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         VStack {
-                Text("Alert!")
+            CircularProgressView(progress: value.truncatingRemainder(dividingBy: 1))
+                .frame(width: 200, height: 200)
+            
+            if value >= 1 {
+                Text("Phase 3! 🎉")
+                    .bold()
                     .padding()
-                    .offset(y: alert)
+            }
+            
+            Text("Heightened Alert!")
+                .padding()
+                .offset(y: alert)
+            
             HStack {
-                Button("Leave House") {
-                    leaveHouse = true
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .padding()
                 Button("more covid") {
                     withAnimation {
                         alert -= 10
+                        value += 0.1
+                        
+                        if value >= 2 {
+                            openURL(URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")!)
+                        }
                     }
                 }
                 .padding()
@@ -42,25 +53,32 @@ struct HeightenedAlert: View {
         .frame(maxHeight: .infinity,
                alignment: .bottom)
         .padding()
-        .alert(isPresented: $leaveHouse) {
-            Alert(title: Text("EH WHY YOU LEAVE HOUSE"),
-                  message: Text("i report"),
-                  primaryButton: .default(Text("okok i go home")){
-                    withAnimation {
-                        alert += 10
-                    }
-                  },
-                  secondaryButton: .default(Text("report then report. i dont care.")){
-                    withAnimation {
-                        alert -= 50
-                    }
-                  })
-        }
     }
 }
 
 struct HeightenedAlert_Previews: PreviewProvider {
     static var previews: some View {
         HeightenedAlert()
+    }
+}
+
+struct CircularProgressView: View {
+    
+    var progress: CGFloat
+    
+    var body: some View {
+        ZStack {
+            Circle()
+                .stroke(lineWidth: 20)
+                .opacity(0.3)
+                .foregroundColor(.red)
+            
+            Circle()
+                .trim(from: 0, to: progress)
+                .stroke(style: .init(lineWidth: 20.0,
+                                     lineCap: .round,
+                                     lineJoin: .round))
+                .foregroundColor(.red)
+        }
     }
 }

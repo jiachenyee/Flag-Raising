@@ -15,7 +15,6 @@
 		323242632654A27600FD2E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323242612654A27600FD2E64 /* LaunchScreen.storyboard */; };
 		3232426B2654A4A500FD2E64 /* HeightenedAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3232426A2654A4A500FD2E64 /* HeightenedAlert.swift */; };
 		3232426D2654A5BD00FD2E64 /* FlagRaising.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3232426C2654A5BD00FD2E64 /* FlagRaising.swift */; };
-		32C00CB7266789D300E0C13C /* WWDCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C00CB6266789D300E0C13C /* WWDCView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		323242642654A27700FD2E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3232426A2654A4A500FD2E64 /* HeightenedAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightenedAlert.swift; sourceTree = "<group>"; };
 		3232426C2654A5BD00FD2E64 /* FlagRaising.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRaising.swift; sourceTree = "<group>"; };
-		32C00CB6266789D300E0C13C /* WWDCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 				3232425A2654A27000FD2E64 /* ContentView.swift */,
 				3232426A2654A4A500FD2E64 /* HeightenedAlert.swift */,
 				3232426C2654A5BD00FD2E64 /* FlagRaising.swift */,
-				32C00CB6266789D300E0C13C /* WWDCView.swift */,
 				3232425C2654A27600FD2E64 /* Assets.xcassets */,
 				323242612654A27600FD2E64 /* LaunchScreen.storyboard */,
 				323242642654A27700FD2E64 /* Info.plist */,
@@ -157,7 +154,6 @@
 				323242572654A27000FD2E64 /* AppDelegate.swift in Sources */,
 				3232426B2654A4A500FD2E64 /* HeightenedAlert.swift in Sources */,
 				323242592654A27000FD2E64 /* SceneDelegate.swift in Sources */,
-				32C00CB7266789D300E0C13C /* WWDCView.swift in Sources */,
 				3232425B2654A27000FD2E64 /* ContentView.swift in Sources */,
 				3232426D2654A5BD00FD2E64 /* FlagRaising.swift in Sources */,
 			);
